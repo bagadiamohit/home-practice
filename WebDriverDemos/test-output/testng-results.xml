@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14318" started-at="2019-02-13T06:31:20Z" finished-at="2019-02-13T06:31:35Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="14318" started-at="2019-02-13T06:31:20Z" finished-at="2019-02-13T06:31:35Z">
+      <class name="actionDemos.ConvertToUpperCase">
+        <test-method status="PASS" signature="convert()[pri:0, instance:actionDemos.ConvertToUpperCase@4678c730]" name="convert" duration-ms="14264" started-at="2019-02-13T12:01:20Z" finished-at="2019-02-13T12:01:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- convert -->
+      </class> <!-- actionDemos.ConvertToUpperCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
