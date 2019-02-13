@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="64825" started-at="2019-02-12T10:40:27Z" finished-at="2019-02-12T10:41:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="64825" started-at="2019-02-12T10:40:27Z" finished-at="2019-02-12T10:41:32Z">
+      <class name="nonePageFactory.TestLoginDDTNONPageFactory">
+        <test-method status="PASS" signature="start()[pri:0, instance:nonePageFactory.TestLoginDDTNONPageFactory@68c4039c]" name="start" is-config="true" duration-ms="11806" started-at="2019-02-12T16:10:27Z" finished-at="2019-02-12T16:10:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="loginCheckusingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:nonePageFactory.TestLoginDDTNONPageFactory@68c4039c]" name="loginCheckusingDataProvider" duration-ms="10316" started-at="2019-02-12T16:10:40Z" data-provider="sampledata" finished-at="2019-02-12T16:10:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lalitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCheckusingDataProvider -->
+        <test-method status="PASS" signature="loginCheckusingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:nonePageFactory.TestLoginDDTNONPageFactory@68c4039c]" name="loginCheckusingDataProvider" duration-ms="7571" started-at="2019-02-12T16:10:50Z" data-provider="sampledata" finished-at="2019-02-12T16:10:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lalitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCheckusingDataProvider -->
+        <test-method status="PASS" signature="loginCheckusingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:nonePageFactory.TestLoginDDTNONPageFactory@68c4039c]" name="loginCheckusingDataProvider" duration-ms="16792" started-at="2019-02-12T16:10:58Z" data-provider="sampledata" finished-at="2019-02-12T16:11:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lalith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCheckusingDataProvider -->
+        <test-method status="PASS" signature="loginCheckusingDataProvider(java.lang.String, java.lang.String)[pri:0, instance:nonePageFactory.TestLoginDDTNONPageFactory@68c4039c]" name="loginCheckusingDataProvider" duration-ms="17544" started-at="2019-02-12T16:11:14Z" data-provider="sampledata" finished-at="2019-02-12T16:11:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lalitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCheckusingDataProvider -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:nonePageFactory.TestLoginDDTNONPageFactory@68c4039c]" name="tearDown" is-config="true" duration-ms="124" started-at="2019-02-12T16:11:32Z" finished-at="2019-02-12T16:11:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- nonePageFactory.TestLoginDDTNONPageFactory -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
