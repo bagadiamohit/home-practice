@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14318" started-at="2019-02-13T06:31:20Z" finished-at="2019-02-13T06:31:35Z">
+  <suite name="Default suite" duration-ms="23418" started-at="2019-02-13T12:20:17Z" finished-at="2019-02-13T12:20:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14318" started-at="2019-02-13T06:31:20Z" finished-at="2019-02-13T06:31:35Z">
-      <class name="actionDemos.ConvertToUpperCase">
-        <test-method status="PASS" signature="convert()[pri:0, instance:actionDemos.ConvertToUpperCase@4678c730]" name="convert" duration-ms="14264" started-at="2019-02-13T12:01:20Z" finished-at="2019-02-13T12:01:35Z">
+    <test name="Default test" duration-ms="23418" started-at="2019-02-13T12:20:17Z" finished-at="2019-02-13T12:20:40Z">
+      <class name="seleniumGrid.LoginApplicationDataDriven">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:seleniumGrid.LoginApplicationDataDriven@14acaea5]" name="startUp" is-config="true" duration-ms="11847" started-at="2019-02-13T17:50:17Z" finished-at="2019-02-13T17:50:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- convert -->
-      </class> <!-- actionDemos.ConvertToUpperCase -->
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="loginTestCase()[pri:0, instance:seleniumGrid.LoginApplicationDataDriven@14acaea5]" name="loginTestCase" duration-ms="10955" started-at="2019-02-13T17:50:29Z" finished-at="2019-02-13T17:50:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:seleniumGrid.LoginApplicationDataDriven@14acaea5]" name="tearDown" is-config="true" duration-ms="588" started-at="2019-02-13T17:50:40Z" finished-at="2019-02-13T17:50:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- seleniumGrid.LoginApplicationDataDriven -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

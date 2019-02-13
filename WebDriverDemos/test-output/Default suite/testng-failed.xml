@@ -3,11 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="actionDemos.ConvertToUpperCase">
+      <class name="seleniumGrid.LoginApplicationDataDriven">
         <methods>
-          <include name="convert"/>
+          <include name="startUp"/>
+          <include name="loginTestCase"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- actionDemos.ConvertToUpperCase -->
+      </class> <!-- seleniumGrid.LoginApplicationDataDriven -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
