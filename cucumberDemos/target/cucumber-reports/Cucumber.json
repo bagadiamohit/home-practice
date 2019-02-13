@@ -1,0 +1,82 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Login with valid credentials",
+        "description": "",
+        "id": "demotours-login-functionality;login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20924287555,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Open the browser and pass the URL",
+            "match": {
+              "location": "DemoLoginStepDef1.open_the_browser_and_pass_the_URL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1343496015,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Navigate to the Login Page",
+            "match": {
+              "location": "DemoLoginStepDef1.navigate_to_the_Login_Page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 199921147,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Enter the valid userid and password",
+            "match": {
+              "location": "DemoLoginStepDef1.enter_the_valid_userid_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 170296380,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Signout button should be available",
+            "match": {
+              "location": "DemoLoginStepDef1.signout_button_should_be_available()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Demotours Login Functionality",
+    "description": "",
+    "id": "demotours-login-functionality",
+    "keyword": "Feature",
+    "uri": "featurefolder/demotours.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@tag"
+      }
+    ]
+  }
+]
