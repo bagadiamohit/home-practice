@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class ConvertToUpperCase {
+public class ConvertToUpperCase2 {
 	@Test
 	public void convert() throws InterruptedException {
 		
