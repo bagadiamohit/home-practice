@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23418" started-at="2019-02-13T12:20:17Z" finished-at="2019-02-13T12:20:40Z">
+  <suite name="Default suite" duration-ms="26136" started-at="2019-02-14T08:54:41Z" finished-at="2019-02-14T08:55:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23418" started-at="2019-02-13T12:20:17Z" finished-at="2019-02-13T12:20:40Z">
-      <class name="seleniumGrid.LoginApplicationDataDriven">
-        <test-method status="PASS" signature="startUp()[pri:0, instance:seleniumGrid.LoginApplicationDataDriven@14acaea5]" name="startUp" is-config="true" duration-ms="11847" started-at="2019-02-13T17:50:17Z" finished-at="2019-02-13T17:50:29Z">
+    <test name="Default test" duration-ms="26136" started-at="2019-02-14T08:54:41Z" finished-at="2019-02-14T08:55:07Z">
+      <class name="actionDemos.ConvertToUpperCase">
+        <test-method status="PASS" signature="convert()[pri:0, instance:actionDemos.ConvertToUpperCase@51565ec2]" name="convert" duration-ms="26034" started-at="2019-02-14T14:24:41Z" finished-at="2019-02-14T14:25:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startUp -->
-        <test-method status="PASS" signature="loginTestCase()[pri:0, instance:seleniumGrid.LoginApplicationDataDriven@14acaea5]" name="loginTestCase" duration-ms="10955" started-at="2019-02-13T17:50:29Z" finished-at="2019-02-13T17:50:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTestCase -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:seleniumGrid.LoginApplicationDataDriven@14acaea5]" name="tearDown" is-config="true" duration-ms="588" started-at="2019-02-13T17:50:40Z" finished-at="2019-02-13T17:50:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- seleniumGrid.LoginApplicationDataDriven -->
+        </test-method> <!-- convert -->
+      </class> <!-- actionDemos.ConvertToUpperCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

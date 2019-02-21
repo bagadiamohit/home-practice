@@ -11,7 +11,7 @@ public class CookieTest {
 	@Test
 	public void workingWithCookies() throws InterruptedException {
 		WebDriver driver;
-		System.setProperty("webdriver.chrome.driver", "C:\\Mohit\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\M\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();//creating a object of the ChromeDriver class which will launch the browser
 		driver.manage().window().maximize(); //maximizing a window
 		driver.get("http://facebook.com");//opening a URL
