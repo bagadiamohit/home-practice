@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="72548" started-at="2019-02-21T13:32:35Z" finished-at="2019-02-21T13:33:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="72548" started-at="2019-02-21T13:32:35Z" finished-at="2019-02-21T13:33:48Z">
+      <class name="onlineshopping.tests.LoginTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:onlineshopping.tests.LoginTest@34b7ac2f]" name="initialize" is-config="true" duration-ms="14260" started-at="2019-02-21T13:32:35Z" finished-at="2019-02-21T13:32:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:onlineshopping.tests.LoginTest@34b7ac2f]" name="loginTest" duration-ms="23902" started-at="2019-02-21T13:33:08Z" data-provider="testdata" finished-at="2019-02-21T13:33:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[phillip.olivier@cowstore.net]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Monu@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:onlineshopping.tests.LoginTest@34b7ac2f]" name="loginTest" duration-ms="15032" started-at="2019-02-21T13:33:32Z" data-provider="testdata" finished-at="2019-02-21T13:33:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[phillip.olivier@cowstore.net]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Monu@12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:onlineshopping.tests.LoginTest@34b7ac2f]" name="afterTest" is-config="true" duration-ms="887" started-at="2019-02-21T13:33:47Z" finished-at="2019-02-21T13:33:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- onlineshopping.tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
