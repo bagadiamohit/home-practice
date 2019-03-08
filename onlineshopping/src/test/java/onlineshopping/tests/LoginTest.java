@@ -24,7 +24,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 public class LoginTest {
-	
+
 	WebDriver driver;
 	String browser="chrome";
 	String url="http://automationpractice.com/index.php";
@@ -35,7 +35,7 @@ public class LoginTest {
 	FileInputStream fs;
 	XSSFWorkbook wb;
 	XSSFSheet sh;
-	
+
 	@BeforeTest
 	public void initialize() {
 		driver=Browser.selectBrowser(browser, driver);
@@ -51,9 +51,10 @@ public class LoginTest {
 	public void loginTest(String email, String password) throws Exception {
 		home.signInLink();
 		login.login(email, password);
+		home.addProduct();
 		login.logout();
 	}
-	
+
 	@DataProvider(name="testdata")
 	public Object[][] testData() throws Exception{
 		File src = new File("C:\\SeleniumLearning\\WS\\onlineshopping\\resources\\TestData.xlsx");
