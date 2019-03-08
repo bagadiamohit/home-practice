@@ -5,7 +5,7 @@
     <classes>
       <class name="onlineshopping.tests.LoginTest">
         <methods>
-          <include name="loginTest" invocation-numbers="1"/>
+          <include name="loginTest" invocation-numbers="0 1"/>
           <include name="initialize"/>
           <include name="afterTest"/>
         </methods>
