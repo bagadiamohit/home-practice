@@ -32,6 +32,7 @@ public class LoginPagePageRepo {
 		System.out.println("Clicking on the sign in button");
 		signInBtn.click();
 		System.out.println("Verifying if the user was able to login successfully");
+		try {
 		if (driver.findElements(By.xpath("//span[contains(text(),'Philip Oliver')]")).size()!=0) {
 			System.out.println("User login successful!!!");
 			//Assert.assertTrue(res);
@@ -43,6 +44,10 @@ public class LoginPagePageRepo {
 		else {
 			System.out.println("Un-successful login");
 			ScreenShotGeneric.captureScreenshot(driver, "Un-Successful Login", testCaseName);
+			throw new AssertionError("Unsuccessful Login Attempt");
+		}
+		}catch(Exception e) {
+			System.out.println("Unsuccessful Login Attempt caught");
 		}
 	}
 

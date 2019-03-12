@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.BankLogin">
         <methods>
-          <include name="bankLoginTest"/>
+          <include name="bankLoginTest" invocation-numbers="1 2 3"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>

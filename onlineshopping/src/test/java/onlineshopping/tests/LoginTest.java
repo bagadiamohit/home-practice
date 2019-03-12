@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import onlineshopping.pageFactory.HomePagePageRepo;
 import onlineshopping.pageFactory.LoginPagePageRepo;
+import onlineshopping.pageFactory.ShoppingCartSummaryPageRepo;
 import onlineshopping.resources.Browser;
 
 import org.testng.annotations.BeforeTest;
@@ -32,6 +33,7 @@ public class LoginTest {
 	String password="Monu@123";*/
 	HomePagePageRepo home;
 	LoginPagePageRepo login;
+	ShoppingCartSummaryPageRepo cart;
 	FileInputStream fs;
 	XSSFWorkbook wb;
 	XSSFSheet sh;
@@ -45,6 +47,7 @@ public class LoginTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		home = PageFactory.initElements(driver, HomePagePageRepo.class);
 		login = PageFactory.initElements(driver, LoginPagePageRepo.class);
+		cart = PageFactory.initElements(driver, ShoppingCartSummaryPageRepo.class);
 	}
 
 	@Test(dataProvider="testdata")
@@ -52,6 +55,7 @@ public class LoginTest {
 		home.signInLink();
 		login.login(email, password);
 		home.addProduct();
+		cart.proceedToCheckout();
 		login.logout();
 	}
 
