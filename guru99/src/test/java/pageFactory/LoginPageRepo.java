@@ -31,12 +31,13 @@ public class LoginPageRepo extends Util{
 	}
 
 	public void login(String username, String password, String uid) throws Exception {
+		wait = new WebDriverWait(driver, 10);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.name("btnLogin")));
 		System.out.println("Entering the credentials and logging in .... ");
 		uname.sendKeys(username);
 		pwd.sendKeys(password);
 		Screenshot.takeScreenShot(driver, "Login Page", "Login");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		wait = new WebDriverWait(driver, 5);
 
 		try {
 			loginBtn.click();
@@ -44,6 +45,7 @@ public class LoginPageRepo extends Util{
 			System.out.println(driver.switchTo().alert().getText());
 			driver.switchTo().alert().accept();
 			foundAlert=true;
+			System.out.println("Login is unsuccessful.. please check and enter the credentials !!!!");
 		}
 		catch (TimeoutException e) {
 			System.out.println("Login is successful...");
