@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import junit.framework.Assert;
 import resources.Util;
-
+import resources.Log;
 import resources.Screenshot;
 
 public class ManagerPageRepo extends Util{
@@ -61,16 +61,20 @@ public class ManagerPageRepo extends Util{
 
 	public void logout() throws Exception {
 
-		if (addCustSuccess==true) {
+		if (foundAlert==false) {
+			Log.info("User is logged in so logout is possible ... ");
 			System.out.println("Logging out from the application .... ");
 			Screenshot.takeScreenShot(driver, "Logout after Successful Login", "Logout");
+			Log.info("Screenshot captured before logging out");
 			Actions action = new Actions(driver);
 			action.moveToElement(logoutLink).click().perform();
 			System.out.println("Clicking on the OK button on the logout alert popup ... ");
 			driver.switchTo().alert().accept();
+			Log.info("Alert after logout is accepted");
 		}
 		else {
-			System.out.println("Add Customer is not successful...");
+			Log.warn("Logout unsuccessful.. user is not logged in...");
+			System.out.println("User is not logged in ... ");
 		}
 
 	}
@@ -79,43 +83,65 @@ public class ManagerPageRepo extends Util{
 			String city, String state, int pinno, long mobile, String email, int pass) throws Exception {
 		wait = new WebDriverWait(driver, 10);
 		if (foundAlert==false) {
+			Log.info("User is logged in.. Adding a customer...");
 			newCustLink.click();
+			Log.info("Add new customer link is found and clicked");
 			System.out.println("Adding a new customer");
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p[contains(text(),'Add New Customer')]")));
+			Log.info("System redirected to the add new customer page");
 			Assert.assertEquals(addNewCustValidationMsg.isDisplayed(), true);
 			System.out.println("Entering the customer details...");
+			Log.info("Entering the customer details");
 
 			this.custName.sendKeys(custName);
+			Log.info("Customer name textbox is found and customer name is entered");
 			if (gender.equalsIgnoreCase("m")) {
 				maleRadio.click();
+				Log.info("Male Radio button is found and checked");
 			}
 			else {
 				femaleRadio.click();
+				Log.info("Female Radio button is found and checked");
 			}
 			dateOfBirth.sendKeys(String.valueOf(dob));
+			Log.info("DOB element is found and the data is entered");
 			this.address.sendKeys(address);
+			Log.info("Address text box is found and the address is entered");
 			this.city.sendKeys(city);
+			Log.info("City text box is found and the details are entered");
 			this.state.sendKeys(state);
+			Log.info("State text box is found and the details are entered");
 			pinNo.sendKeys(String.valueOf(pinno));
+			Log.info("Pin NO text box is found and the details are entered");
 			phoneNo.sendKeys(String.valueOf(mobile));
+			Log.info("Phone No text box is found and the details are entered");
 			emailId.sendKeys(email);
+			Log.info("Email text box is found and the details are entered");
 			pwd.sendKeys(String.valueOf(pass));
+			Log.info("Password text box is found and the details are entered");
 			Screenshot.takeScreenShot(driver, "Entered Customer Details", "Customer");
+			Log.info("Screenshot captured after entering the customer details");
 
 			try {
 				submitBtn.click();
+				Log.info("Submit button found and clicked");
 				wait.until(ExpectedConditions.alertIsPresent());
+				Log.warn("Browser alert found.. please recheck the customer details and enter it again");
 				System.out.println(driver.switchTo().alert().getText());
+				Log.error(driver.switchTo().alert().getText());
 				driver.switchTo().alert().accept();
 				addCustSuccess=false;
 			}
 			catch(Exception e) {
 				Assert.assertEquals(custAddValidationMsg.isDisplayed(), true);
+				Log.info("Customer added successfully");
 				System.out.println("Customer Added successfully... ");
 				Screenshot.takeScreenShot(driver, "Customer Added Successfully", "Customer");
+				Log.info("Screenshot captured with the cust ID");
 				custID = cID.getText();
 				System.out.println("Customer ID is: "+custID);
 				continueBtn.click();
+				Log.info("Continue button found after adding the customer and clicked");
 				addCustSuccess=true;
 			}
 
@@ -126,30 +152,40 @@ public class ManagerPageRepo extends Util{
 
 	public void createCustAcc(String custID, String accType, int initialDepAmt) {
 		if (addCustSuccess==true) {
+			Log.info("Creating an account for the customer added");
 			wait = new WebDriverWait(driver, 10);
 			System.out.println("Creating an account for the customer ... ");
 			newAccountLink.click();
+			Log.info("Clicking on the New Account link on the Bank Manager home page");
 			customerID.sendKeys(custID);
+			Log.info("Customer ID element is found and the details are entered");
 			Select sel = new Select(accountType);
 			sel.selectByValue(accType);
+			Log.info("Acc type dropdown elementis found and a type is selected");
 			try {
 				if (initialDepAmt>1000) {
 					initialDepositAmt.sendKeys(String.valueOf(initialDepAmt));
+					Log.info("Initial deposit element is found and the details are entered");
 				}
 				else {
 					System.out.println("Amount should be greater than 1000");
+					Log.warn("Amount entered is less than 1000... ");
 				}
 				submitBtnAddAcc.click();
+				Log.info("Submit button is found and clicked");
 				wait.until(ExpectedConditions.alertIsPresent());
+				Log.warn("Error post clicking on the submut button on the Add account page");
 				System.out.println(driver.switchTo().alert().getText());
 				driver.switchTo().alert().accept();
 				addAccSuccess=false;
 			}catch(Exception e) {
 				Assert.assertEquals(accountAddSuccessValidationMsg.isDisplayed(), true);
+				Log.info("Customer Account created successfully");
 				System.out.println("Customer Account created successfully ... ");
 				accountID=aID.getText();
 				System.out.println("Account ID for custID: "+custID+" is: "+accountID);
 				continueBtn.click();
+				Log.info("Clicking on the continue button after adding an account");
 				addAccSuccess=true;
 			}
 

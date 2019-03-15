@@ -1,0 +1,83 @@
+2019-03-15 17:25:38,623 INFO  [Log] Browser is specified 
+2019-03-15 17:25:38,624 INFO  [Log] Browser launched 
+2019-03-15 17:25:43,632 INFO  [Log] Browser window is maximized 
+2019-03-15 17:25:53,776 INFO  [Log] Launched the application under test 
+2019-03-15 17:25:54,723 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:25:54,723 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:25:54,723 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Bank Login Functionality       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2019-03-15 17:25:54,723 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:25:54,723 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:25:54,723 INFO  [Log] Calling the login function 
+2019-03-15 17:25:54,789 INFO  [Log] Page is loaded. Login Button found. Proceeding further... 
+2019-03-15 17:25:54,960 INFO  [Log] Username textbox found and the username is entered as :mngr182546 
+2019-03-15 17:25:55,106 INFO  [Log] Password textbox found and the password is entered 
+2019-03-15 17:25:55,437 INFO  [Log] Screenshot is captured after entering the username and password 
+2019-03-15 17:25:56,977 INFO  [Log] Login button is found and clicked 
+2019-03-15 17:26:07,112 INFO  [Log] Login is successful 
+2019-03-15 17:26:07,501 INFO  [Log] Screenshot is captured after logging in.. 
+2019-03-15 17:26:07,501 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2019-03-15 17:26:07,501 INFO  [Log] X 
+2019-03-15 17:26:07,501 INFO  [Log] X 
+2019-03-15 17:26:07,501 INFO  [Log] X 
+2019-03-15 17:26:07,501 INFO  [Log] X 
+2019-03-15 17:26:07,509 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:07,509 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:07,509 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Add Customer Functionality       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2019-03-15 17:26:07,509 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:07,509 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:07,509 INFO  [Log] Calling the Add customer function 
+2019-03-15 17:26:07,509 INFO  [Log] User is logged in.. Adding a customer... 
+2019-03-15 17:26:08,373 INFO  [Log] Add new customer link is found and clicked 
+2019-03-15 17:26:08,402 INFO  [Log] System redirected to the add new customer page 
+2019-03-15 17:26:08,437 INFO  [Log] Entering the customer details 
+2019-03-15 17:26:08,554 INFO  [Log] Customer name textbox is found and customer name is entered 
+2019-03-15 17:26:08,625 INFO  [Log] Male Radio button is found and checked 
+2019-03-15 17:26:08,741 INFO  [Log] DOB element is found and the data is entered 
+2019-03-15 17:26:08,891 INFO  [Log] Address text box is found and the address is entered 
+2019-03-15 17:26:08,994 INFO  [Log] City text box is found and the details are entered 
+2019-03-15 17:26:09,086 INFO  [Log] State text box is found and the details are entered 
+2019-03-15 17:26:09,169 INFO  [Log] Pin NO text box is found and the details are entered 
+2019-03-15 17:26:09,271 INFO  [Log] Phone No text box is found and the details are entered 
+2019-03-15 17:26:09,437 INFO  [Log] Email text box is found and the details are entered 
+2019-03-15 17:26:09,528 INFO  [Log] Password text box is found and the details are entered 
+2019-03-15 17:26:09,829 INFO  [Log] Screenshot captured after entering the customer details 
+2019-03-15 17:26:10,243 INFO  [Log] Submit button found and clicked 
+2019-03-15 17:26:10,247 WARN  [Log] Browser alert found.. please recheck the customer details and enter it again 
+2019-03-15 17:26:10,256 ERROR [Log] Email Address Already Exist !! 
+2019-03-15 17:26:10,266 INFO  [Log] Writing the customer ID back to the excel file 
+2019-03-15 17:26:10,481 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2019-03-15 17:26:10,481 INFO  [Log] X 
+2019-03-15 17:26:10,481 INFO  [Log] X 
+2019-03-15 17:26:10,481 INFO  [Log] X 
+2019-03-15 17:26:10,481 INFO  [Log] X 
+2019-03-15 17:26:10,486 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,487 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,487 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Add Account Functionality       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2019-03-15 17:26:10,487 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,487 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,487 INFO  [Log] Calling the add account function 
+2019-03-15 17:26:10,487 INFO  [Log] Writing the account no to the excel file 
+2019-03-15 17:26:10,536 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2019-03-15 17:26:10,536 INFO  [Log] X 
+2019-03-15 17:26:10,536 INFO  [Log] X 
+2019-03-15 17:26:10,536 INFO  [Log] X 
+2019-03-15 17:26:10,536 INFO  [Log] X 
+2019-03-15 17:26:10,541 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,541 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,541 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Logout Functionality       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2019-03-15 17:26:10,541 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,541 INFO  [Log] **************************************************************************************** 
+2019-03-15 17:26:10,542 INFO  [Log] Calling the logout function 
+2019-03-15 17:26:10,542 INFO  [Log] User is logged in so logout is possible ...  
+2019-03-15 17:26:10,861 INFO  [Log] Screenshot captured before logging out 
+2019-03-15 17:26:11,562 INFO  [Log] Alert after logout is accepted 
+2019-03-15 17:26:11,562 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2019-03-15 17:26:11,562 INFO  [Log] X 
+2019-03-15 17:26:11,562 INFO  [Log] X 
+2019-03-15 17:26:11,562 INFO  [Log] X 
+2019-03-15 17:26:11,562 INFO  [Log] X 
+2019-03-15 17:26:12,400 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2019-03-15 17:26:12,400 INFO  [Log] X 
+2019-03-15 17:26:12,400 INFO  [Log] X 
+2019-03-15 17:26:12,400 INFO  [Log] X 
+2019-03-15 17:26:12,400 INFO  [Log] X 

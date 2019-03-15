@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67533" started-at="2019-03-14T14:01:04Z" finished-at="2019-03-14T14:02:11Z">
+  <suite name="Default suite" duration-ms="33922" started-at="2019-03-15T11:55:38Z" finished-at="2019-03-15T11:56:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67533" started-at="2019-03-14T14:01:04Z" finished-at="2019-03-14T14:02:11Z">
+    <test name="Default test" duration-ms="33922" started-at="2019-03-15T11:55:38Z" finished-at="2019-03-15T11:56:12Z">
       <class name="tests.TestRunner">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:tests.TestRunner@14acaea5]" name="beforeTest" is-config="true" duration-ms="8704" started-at="2019-03-14T14:01:04Z" finished-at="2019-03-14T14:01:12Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:tests.TestRunner@523884b2]" name="beforeTest" is-config="true" duration-ms="16183" started-at="2019-03-15T11:55:38Z" finished-at="2019-03-15T11:55:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="bankLoginTest(java.lang.String, java.lang.String)[pri:1, instance:tests.TestRunner@14acaea5]" name="bankLoginTest" duration-ms="12744" started-at="2019-03-14T14:01:12Z" data-provider="credentials" finished-at="2019-03-14T14:01:25Z">
+        <test-method status="PASS" signature="bankLoginTest(java.lang.String, java.lang.String)[pri:1, instance:tests.TestRunner@523884b2]" name="bankLoginTest" duration-ms="12795" started-at="2019-03-15T11:55:54Z" data-provider="credentials" finished-at="2019-03-15T11:56:07Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bankLoginTest -->
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, int, long, java.lang.String, int)[pri:2, instance:tests.TestRunner@14acaea5]" name="addCustomerTest" duration-ms="15402" started-at="2019-03-14T14:01:25Z" data-provider="CustData" finished-at="2019-03-14T14:01:41Z">
+        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, int, long, java.lang.String, int)[pri:2, instance:tests.TestRunner@523884b2]" name="addCustomerTest" duration-ms="2975" started-at="2019-03-15T11:56:07Z" data-provider="CustData" finished-at="2019-03-15T11:56:10Z">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,7 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[testacca3@gmail.com]]>
+                <![CDATA[testacca7@gmail.com]]>
               </value>
             </param>
             <param index="9">
@@ -83,67 +83,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, int, long, java.lang.String, int)[pri:2, instance:tests.TestRunner@14acaea5]" name="addCustomerTest" duration-ms="14655" started-at="2019-03-14T14:01:41Z" data-provider="CustData" finished-at="2019-03-14T14:01:55Z">
+        <test-method status="PASS" signature="createAccount(java.lang.String, java.lang.String, int)[pri:3, instance:tests.TestRunner@523884b2]" name="createAccount" duration-ms="51" started-at="2019-03-15T11:56:10Z" data-provider="AccountData" finished-at="2019-03-15T11:56:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Testing]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[f]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11121989]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[test street test colony]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[TestCity]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[TestState]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[2147483647]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[testacca4@gmail.com]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCustomerTest -->
-        <test-method status="PASS" signature="createAccount(java.lang.String, java.lang.String, int)[pri:3, instance:tests.TestRunner@14acaea5]" name="createAccount" duration-ms="13249" started-at="2019-03-14T14:01:55Z" data-provider="AccountData" finished-at="2019-03-14T14:02:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4408]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="1">
@@ -160,32 +104,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccount -->
-        <test-method status="PASS" signature="createAccount(java.lang.String, java.lang.String, int)[pri:3, instance:tests.TestRunner@14acaea5]" name="createAccount" duration-ms="727" started-at="2019-03-14T14:02:08Z" data-provider="AccountData" finished-at="2019-03-14T14:02:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[53448]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Current]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[500]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createAccount -->
-        <test-method status="PASS" signature="logOutTest()[pri:4, instance:tests.TestRunner@14acaea5]" name="logOutTest" duration-ms="1134" started-at="2019-03-14T14:02:09Z" finished-at="2019-03-14T14:02:10Z">
+        <test-method status="PASS" signature="logOutTest()[pri:4, instance:tests.TestRunner@523884b2]" name="logOutTest" duration-ms="1023" started-at="2019-03-15T11:56:10Z" finished-at="2019-03-15T11:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOutTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:tests.TestRunner@14acaea5]" name="afterTest" is-config="true" duration-ms="834" started-at="2019-03-14T14:02:10Z" finished-at="2019-03-14T14:02:11Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:tests.TestRunner@523884b2]" name="afterTest" is-config="true" duration-ms="835" started-at="2019-03-15T11:56:11Z" finished-at="2019-03-15T11:56:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
