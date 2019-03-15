@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pageFactory.LoginPageRepo;
 import pageFactory.ManagerPageRepo;
 import resources.Browser;
+import resources.Log;
 import resources.Screenshot;
 import resources.Util;
 
@@ -19,6 +20,8 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
@@ -30,10 +33,13 @@ public class TestRunner extends Util {
 
 	@BeforeTest
 	public void beforeTest() throws Exception {
+		DOMConfigurator.configure("log4j.xml");
 		b = new Browser();
 		driver = b.selectBrowser(driver, browser);
 		driver.manage().window().maximize();
+		Log.info("Browser window is maximized");
 		driver.get(url);
+		Log.info("Launched the application under test");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		lpr = PageFactory.initElements(driver, LoginPageRepo.class);
 		mpr = PageFactory.initElements(driver, ManagerPageRepo.class);
@@ -44,16 +50,22 @@ public class TestRunner extends Util {
 
 	@Test(dataProvider="credentials",priority=1)
 	public void bankLoginTest(String username, String password) throws Exception {
+		Log.startTestCase("Bank Login Functionality");
 		String uid="Manger Id : "+username;
+		Log.info("Calling the login function");
 		lpr.login(username, password, uid);
+		Log.endTestCase("Bank Login Functionality");
 	}
 
 	@Test(dataProvider="CustData", priority=2)
 	public void addCustomerTest(String custName, String gender, int dob, String address, 
 			String city, String state, int pinno, long mobile, String email, int pass) throws Exception {
+		Log.startTestCase("Add Customer Functionality");
+		Log.info("Calling the Add customer function");
 		sh4 = wb.getSheetAt(1);
 		//int maxCols = sh4.getRow(0).getLastCellNum();
 		mpr.addNewCustomer(custName, gender, dob, address, city, state, pinno, mobile, email, pass);
+		Log.info("Writing the customer ID back to the excel file");
 		fos = new FileOutputStream(src);
 		r1 = sh4.getRow(tempRow1);
 		r1.createCell(10).setCellValue(custID);
@@ -61,24 +73,32 @@ public class TestRunner extends Util {
 		fos.close();
 		tempRow1+=1;
 		//wb.close();
+		Log.endTestCase("Add Customer Functionality");
 	}
 
 	@Test(dataProvider="AccountData", priority=3)
 	public void createAccount(String custID, String accType, int initialDepAmt) throws IOException {
+		Log.startTestCase("Add Account Functionality");
+		Log.info("Calling the add account function");
 		sh5 = wb.getSheetAt(1);
 		int maxCols = sh5.getRow(0).getLastCellNum();
 		mpr.createCustAcc(custID, accType, initialDepAmt);
+		Log.info("Writing the account no to the excel file");
 		fos = new FileOutputStream(src);
 		r2 = sh5.getRow(tempRow2);
 		r2.createCell(maxCols-1).setCellValue(accountID);
 		wb.write(fos);
 		fos.close();
 		tempRow2+=1;
+		Log.endTestCase("Add Account Functionality");
 	}
 
 	@Test(priority=4)
 	public void logOutTest() throws Exception {
+		Log.startTestCase("Logout Functionality");
+		Log.info("Calling the logout function");
 		mpr.logout();
+		Log.endTestCase("Logout Functionality");
 	}
 
 	@DataProvider(name="credentials")
@@ -130,6 +150,7 @@ public class TestRunner extends Util {
 	@AfterTest
 	public void afterTest() throws Exception {
 		driver.quit();
-		//wb.close();
+		wb.close();
+		Log.endTestCase("Bank Test Completed");
 	}
 }
