@@ -54,6 +54,11 @@ public class ManagerPageRepo extends Util{
 	@FindBy(xpath="//p[contains(text(),'Account Generated Successfully!!!')]") WebElement accountAddSuccessValidationMsg;
 	@FindBy(xpath="/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[4]/td[2]") WebElement aID;
 
+	
+	//Edit Customer
+	@FindBy(xpath="//a[contains(text(),'Edit Customer')]") WebElement editCustomerBtn;
+	@FindBy(xpath="//p[contains(text(),'Customer details updated Successfully!!!')]") WebElement custEditValidationMsg;
+	
 
 	public ManagerPageRepo(WebDriver driver) {
 		this.driver=driver;
@@ -144,7 +149,38 @@ public class ManagerPageRepo extends Util{
 				Log.info("Continue button found after adding the customer and clicked");
 				addCustSuccess=true;
 			}
-
+		}
+	}
+	
+	//Edit the customer details
+	public void editCustAcc(String CustID) {
+		if (foundAlert==false) {
+			Log.info("Manager is logged in .. Edit customer is possible");
+			editCustomerBtn.click();
+			Log.info("Edit Customer button is found and the details are entered");
+			customerID.sendKeys(CustID);
+			Log.info("Customer ID test box is found and the details are entered");
+			submitBtn.click();
+			Log.info("Submit Button is found and clicked");
+			phoneNo.clear();
+			Log.info("Phone number field is found and the data is cleared");
+			phoneNo.sendKeys("999999999");
+			Log.info("Changing the phone number... Phone number element is found and details are entered");
+			try {
+				submitBtn.click();
+				Log.info("Submit button is found and clicked");
+				wait.until(ExpectedConditions.alertIsPresent());
+				Log.warn("Error post clicking on the submut button on the Edit customer page");
+				System.out.println(driver.switchTo().alert().getText());
+				Log.info(driver.switchTo().alert().getText());
+				driver.switchTo().alert().accept();
+			}
+			catch(Exception e) {
+				Assert.assertEquals(custEditValidationMsg.isDisplayed(), true);
+				Log.info("Customer details are updated successfully!!!");
+				continueBtn.click();
+				Log.info("Continue button is found and clicked!!!");
+			}
 		}
 	}
 

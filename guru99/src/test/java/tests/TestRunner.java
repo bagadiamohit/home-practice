@@ -65,14 +65,19 @@ public class TestRunner extends Util {
 		sh4 = wb.getSheetAt(1);
 		//int maxCols = sh4.getRow(0).getLastCellNum();
 		mpr.addNewCustomer(custName, gender, dob, address, city, state, pinno, mobile, email, pass);
-		Log.info("Writing the customer ID back to the excel file");
-		fos = new FileOutputStream(src);
-		r1 = sh4.getRow(tempRow1);
-		r1.createCell(10).setCellValue(custID);
-		wb.write(fos);
-		fos.close();
-		tempRow1+=1;
-		//wb.close();
+		if(addCustSuccess==true) {
+			Log.info("Writing the customer ID back to the excel file");
+			fos = new FileOutputStream(src);
+			r1 = sh4.getRow(tempRow1);
+			r1.createCell(10).setCellValue(custID);
+			wb.write(fos);
+			fos.close();
+			tempRow1+=1;
+		}
+		else {
+			System.out.println("Add Customer is not successful!!!");
+			Log.info("Add Customer is not successful. Excel is not updated");
+		}
 		Log.endTestCase("Add Customer Functionality");
 	}
 
@@ -83,17 +88,31 @@ public class TestRunner extends Util {
 		sh5 = wb.getSheetAt(1);
 		int maxCols = sh5.getRow(0).getLastCellNum();
 		mpr.createCustAcc(custID, accType, initialDepAmt);
-		Log.info("Writing the account no to the excel file");
-		fos = new FileOutputStream(src);
-		r2 = sh5.getRow(tempRow2);
-		r2.createCell(maxCols-1).setCellValue(accountID);
-		wb.write(fos);
-		fos.close();
-		tempRow2+=1;
+		if(addAccSuccess==true) {
+			Log.info("Writing the account no to the excel file");
+			fos = new FileOutputStream(src);
+			r2 = sh5.getRow(tempRow2);
+			r2.createCell(maxCols-1).setCellValue(accountID);
+			wb.write(fos);
+			fos.close();
+			tempRow2+=1;
+		}
+		else {
+			System.out.println("Add Account is not successful!!!");
+			Log.info("Add Account is not successful. Excel is not updated");
+		}
 		Log.endTestCase("Add Account Functionality");
 	}
 
-	@Test(priority=4)
+	@Test(dataProvider="editCustomer", priority=4)
+	public void editCustomer(String CustID) {
+		Log.startTestCase("Edit Customer Information Test Case");
+		Log.info("Calling the Edit Customer Function");
+		mpr.editCustAcc(CustID);
+		Log.endTestCase("Edit Customer Functionality End");
+	}
+
+	@Test(priority=5)
 	public void logOutTest() throws Exception {
 		Log.startTestCase("Logout Functionality");
 		Log.info("Calling the logout function");
@@ -143,6 +162,17 @@ public class TestRunner extends Util {
 			data[i-1][0] = sh3.getRow(i).getCell(10).getStringCellValue();
 			data[i-1][1] = sh3.getRow(i).getCell(11).getStringCellValue();
 			data[i-1][2] = (int) sh3.getRow(i).getCell(12).getNumericCellValue();
+		}
+		return data;
+	}
+
+	@DataProvider(name="editCustomer")
+	public Object[][] testData3(){
+		sh3 = wb.getSheetAt(1);
+		int maxRows = sh3.getLastRowNum()+1;
+		Object[][] data = new Object[maxRows-1][1];
+		for (int i=1; i<maxRows; i++) {
+			data[i-1][0] = sh3.getRow(i).getCell(10).getStringCellValue();
 		}
 		return data;
 	}
