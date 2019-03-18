@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.TestRunner">
         <methods>
-          <include name="createAccount"/>
           <include name="beforeTest"/>
+          <include name="editCustomer" invocation-numbers="0 1"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- tests.TestRunner -->
